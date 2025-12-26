@@ -1,0 +1,22 @@
+# Python bytecode (file sampah sistem)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment (Kotak peralatan lokal Anda)
+.venv/
+env/
+venv/
+ENV/
+
+# Data (PENTING: Agar PDF berat tidak masuk ke GitHub)
+data/raw/*.pdf
+data/processed/
+
+# File konfigurasi rahasia
+.env
+
+# Folder sampah OS
+.DS_Store
+
+Thumbs.db
