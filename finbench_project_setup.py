@@ -18,13 +18,13 @@ def setup_project():
     
     for folder in folders:
         os.makedirs(folder, exist_ok=True)
-        print(f"✔ Folder created: {folder}")
+        print(f"Folder created: {folder}")
 
     # 2. Membaca Dataset untuk mengambil Link PDF
     jsonl_file = r"C:\Users\ARYA\Downloads\financebench_merged.jsonl"
     
     if not os.path.exists(jsonl_file):
-        print(f"❌ Error: File {jsonl_file} tidak ditemukan!")
+        print(f"Error: File {jsonl_file} tidak ditemukan!")
         return
 
     print(f"\n--- Memulai Proses Download PDF ---")
@@ -59,13 +59,8 @@ def setup_project():
             else:
                 fail_count += 1
         except Exception as e:
-            print(f"\n⚠️ Gagal download {doc_name}: {e}")
+            print(f"\nGagal download {doc_name}: {e}")
             fail_count += 1
-
-    print(f"\n--- Selesai! ---")
-    print(f"✅ Berhasil download: {success_count} file")
-    print(f"❌ Gagal: {fail_count} file")
-    print(f"📂 Semua PDF tersimpan di: data/raw/")
 
 if __name__ == "__main__":
     setup_project()
